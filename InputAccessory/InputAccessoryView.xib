@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputAccessoryView" customModule="InputAccessory" customModuleProvider="target">
+            <connections>
+                <outlet property="accessoryButtonView" destination="eZE-As-5B6" id="2sG-BH-qi2"/>
+                <outlet property="accessoryButtonViewHeightConstraint" destination="1AX-pB-xE1" id="P1l-0n-zNZ"/>
+                <outlet property="textView" destination="KAH-9k-Oku" id="9zx-P2-myq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="41k-oH-rnz">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KAH-9k-Oku">
+                    <rect key="frame" x="10" y="50" width="394" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="8vE-U5-Twm"/>
+                    </connections>
+                </textView>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eZE-As-5B6">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JE-Jh-D4F">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                            <state key="normal" title="Tap to disappear"/>
+                            <connections>
+                                <action selector="accessoryButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="iCJ-1g-ujH"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="1AX-pB-xE1"/>
+                        <constraint firstAttribute="bottom" secondItem="7JE-Jh-D4F" secondAttribute="bottom" id="CPD-Yu-i5e"/>
+                        <constraint firstItem="7JE-Jh-D4F" firstAttribute="top" secondItem="eZE-As-5B6" secondAttribute="top" id="Z0L-Oi-zyO"/>
+                        <constraint firstItem="7JE-Jh-D4F" firstAttribute="leading" secondItem="eZE-As-5B6" secondAttribute="leading" id="lgb-Gp-Ljr"/>
+                        <constraint firstAttribute="trailing" secondItem="7JE-Jh-D4F" secondAttribute="trailing" id="yZW-vj-MPy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="eZE-As-5B6" firstAttribute="top" secondItem="41k-oH-rnz" secondAttribute="top" id="YOS-gU-EBu"/>
+                <constraint firstItem="eZE-As-5B6" firstAttribute="leading" secondItem="41k-oH-rnz" secondAttribute="leading" id="bI4-SJ-IBU"/>
+                <constraint firstAttribute="trailing" secondItem="KAH-9k-Oku" secondAttribute="trailing" constant="10" id="fRX-pw-o5A"/>
+                <constraint firstAttribute="bottom" secondItem="KAH-9k-Oku" secondAttribute="bottom" constant="10" id="kne-10-Cfs"/>
+                <constraint firstItem="KAH-9k-Oku" firstAttribute="leading" secondItem="41k-oH-rnz" secondAttribute="leading" constant="10" id="l9V-4e-kT2"/>
+                <constraint firstItem="KAH-9k-Oku" firstAttribute="top" secondItem="eZE-As-5B6" secondAttribute="bottom" priority="900" constant="10" id="mYP-MF-JVs"/>
+                <constraint firstAttribute="trailing" secondItem="eZE-As-5B6" secondAttribute="trailing" id="y7N-3K-Xhb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="8W0-Ql-eV5"/>
+            <point key="canvasLocation" x="-855.07246376811599" y="-89.397321428571431"/>
+        </view>
+    </objects>
+</document>
