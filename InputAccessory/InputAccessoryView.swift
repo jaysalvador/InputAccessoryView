@@ -3,7 +3,6 @@
 //  InputAccessory
 //
 //  Created by Jay Andrae on 29/6/19.
-//  Copyright © 2019 PlaySport. All rights reserved.
 //
 
 import UIKit
